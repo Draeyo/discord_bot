@@ -50,8 +50,8 @@ bot.on('message', msg => {
 						.catch(console.error);
 		}
 		else if (input === 'whisper') {
-				msg.reply('Hi! My name is Whisper and as you can see, i\'m a bot!\nType \'w help\' to get the list of commands you can use on me.')
-						.then(msg => console.log('User' + user + ' directly ask for whisper in channel ' + channel))
+				msg.reply('Hi! My name is Whisper and as you can see, i\'m a bot!\nType \'w help\' to get the list of commands you can use on me.', { tts:true })
+						.then(msg => console.log('User ' + user + ' directly asked for whisper in channel ' + channel))
 						.catch(console.error);
 		}
 });
