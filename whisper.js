@@ -1,7 +1,7 @@
 var Discord = require('discord.js');
 var bot = new Discord.Client();
 
-var token = 'MjM4NzQ3Nzk2NTI4ODI0MzI4.CvbBmg.dsMntCwqkTEtRd4qlQ_83KTgisc'
+var token = 'MjM4NzQ3Nzk2NTI4ODI0MzI4.Cvk2nQ.nslyjZfTCcRKJ_t5t7fIBTx1KHk'
 var prefix = 'w ';
 
 bot.on('ready', () => {
@@ -50,10 +50,11 @@ bot.on('message', msg => {
 						.catch(console.error);
 		}
 		else if (input === 'whisper') {
-				msg.reply('Hi! My name is Whisper and as you can see, i\'m a bot!\nType \'w help\' to get the list of commands you can use on me.', { tts:true })
+				msg.reply('Hi! My name is Whisper and as you can see, i\'m a bot!\nType \'w help\' to get the list of commands you can use on me.')
 						.then(msg => console.log('User ' + user + ' directly asked for whisper in channel ' + channel))
 						.catch(console.error);
 		}
 });
 
 bot.login(token);
+
