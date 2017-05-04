@@ -86,11 +86,11 @@ bot.on('message', msg => {
 						voiceChannel.leave();
 				}
 		}
-		else if (input.startsWith(prefix + 'load')) {
+		else if (input.startsWith(prefix + 'play')) {
 				var rest = msg.content.split(" ");
 				rest.splice(0, 1);
 				rest = rest.join(" ");
-				var filePath = LOADDIR + rest;
+				var filePath = LOADDIR + rest + '.mp3';
 				voiceChannel.join()
 				.then(connection => {const dispatcher = connection.playFile(filePath);})
 				.catch(console.error);
