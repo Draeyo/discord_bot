@@ -91,16 +91,15 @@ bot.on('message', msg => {
 				rest.splice(0, 1);
 				rest = rest.join(" ");
 				var filePath = LOADDIR + rest + '.mp3';
-				voiceChannel.join()
-				.then(connection => {const dispatcher = connection.playFile(filePath);})
-				.catch(console.error);
+				voiceChannel.join().then(connection => {
+						const dispatcher = connection.playFile(filePath);
+				}).catch(console.error);
 		}
 		else if (input.startsWith(prefix + 'yt')) {
 				var rest = msg.content.split(" ");
 				rest.splice(0, 1);
 				rest = rest.join(" ");
-				voiceChannel.join()
-				.then(connection => {
+				voiceChannel.join().then(connection => {
 						const stream = ytdl(rest, { filter: 'audioonly' });
 						const dispatcher = connection.playStream(stream, streamOptions);
 				}).catch(console.error);
